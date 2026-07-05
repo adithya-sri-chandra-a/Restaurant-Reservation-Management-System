@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/health', (req, res) => {
   res.status(200).json({ success: true, message: 'API is healthy' });
 });
-
+console.log(routes);
 app.use('/api', routes);
 
 app.all('*', (req, res, next) => {
