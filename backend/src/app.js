@@ -12,9 +12,9 @@ const { cleanupExpiredReservations } = require('./utils/cleanupExpiredReservatio
 const app = express();
 
 const allowedOrigins = [
+  process.env.FRONTEND_URL,
   'http://localhost:3000',
-  'http://localhost:5173',
-  process.env.FRONTEND_URL
+  'http://localhost:5173'
 ].filter(Boolean);
 
 app.use(helmet());
